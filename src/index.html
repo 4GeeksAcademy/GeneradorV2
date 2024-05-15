@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de cartas</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body onload="init()" class="bg-green-500 place-items-center grid">
+    <div class="m-5">
+      <label class="rounded-lg p-1 pr-0 bg-slate-400 mr-2 font-bold" for="alto"
+        ><span>Alto</span>
+        <input id="alto" class="rounded-lg" placeholder=" rem" type="text" />
+      </label>
+      <label class="rounded-lg p-1 bg-slate-400 ml-2 font-bold" for="ancho"
+        ><span>Ancho</span>
+        <input id="ancho" class="rounded-lg ml-2" placeholder=" rem" type="text" />
+      </label>
+    </div>
+    <div>
+      <button
+        onclick="newSize()"
+        class="bg-red-400 rounded-full p-1 hover:bg-red-600 active:bg-red-700 active:ring active:ring-red-300 mr-1"
+      >
+        Aplicar
+      </button>
+      <button
+        onclick="resetSize()"
+        class="bg-red-400 rounded-full p-1 hover:bg-red-600 active:bg-red-700 active:ring active:ring-red-300 ml-1"
+      >
+        Reset
+      </button>
+    </div>
+
+    <div class="bg-white p-2 grid m-2 rounded-xl card mt-10">
+      <div id="top" class="bg-white text-6xl m-1">Palo</div>
+      <div
+        id="number"
+        class="bg-white place-items-center grid text-6xl font-bold"
+      >
+        Numero
+      </div>
+      <div
+        id="bot"
+        class="m-1 bg-white flex justify-end place-items-end text-6xl"
+      >
+        Palo
+      </div>
+    </div>
+    <div class="m-2">
+      <button
+        onclick="init()"
+        class="text-stone-50 rounded-full p-2 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none active:ring active:ring-violet-300"
+      >
+        Barajar Cartas
+      </button>
+    </div>
+    <span id="timer" class="bg-yellow-400 rounded-full p-3 m-2">10</span>
+    <script src="app.js"></script>
+  </body>
+</html>
