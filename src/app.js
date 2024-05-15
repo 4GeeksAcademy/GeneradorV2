@@ -66,6 +66,7 @@ setInterval(temporizador, 1000);
 //Tamaño
 let cardSize = document.querySelector(".card");
 
+// eslint-disable-next-line no-unused-vars
 const newSize = () => {
   let height = parseInt(document.querySelector("#alto").value);
   let width = parseInt(document.querySelector("#ancho").value);
@@ -73,6 +74,7 @@ const newSize = () => {
   cardSize.style.width = `${width}rem`;
 };
 
+// eslint-disable-next-line no-unused-vars
 const resetSize = () => {
   cardSize.style.height = `29.375rem`;
   cardSize.style.width = `19.688rem`;
